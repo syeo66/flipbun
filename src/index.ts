@@ -26,7 +26,7 @@ block1.addEventListener('click', () => {
         transform: 'translate(0px, 0px)',
       },
     ],
-    { duration: 300, fill: 'both' }
+    { duration: 400, fill: 'both', easing: 'ease-in-out' }
   )
 
   index = (index + 1) % positions.length
