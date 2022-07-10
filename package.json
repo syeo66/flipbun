@@ -1,0 +1,12 @@
+{
+  "name": "flip",
+  "version": "0.0.1",
+  "description": "A FLIP animation test",
+  "main": "src/index.ts",
+  "author": "Red Ochsenbein <red@redochsenbein.ch>",
+  "license": "BSD0",
+  "private": true,
+  "dependencies": {
+    "bun-types": "^0.1.2"
+  }
+}
