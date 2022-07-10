@@ -7,27 +7,29 @@ const positions: Element[] = [
 ]
 let index = 0
 
-block1.addEventListener('click', () => {
-  const start = block1.getBoundingClientRect()
+if (block1) {
+  block1.addEventListener('click', () => {
+    const start = block1.getBoundingClientRect()
 
-  positions[index].appendChild(block1)
+    positions[index].appendChild(block1)
 
-  const end = block1.getBoundingClientRect()
+    const end = block1.getBoundingClientRect()
 
-  const dx = end.left - start.left
-  const dy = end.top - start.top
+    const dx = end.left - start.left
+    const dy = end.top - start.top
 
-  block1.animate(
-    [
-      {
-        transform: `translate(${-dx}px, ${-dy}px)`,
-      },
-      {
-        transform: 'translate(0px, 0px)',
-      },
-    ],
-    { duration: 400, fill: 'both', easing: 'ease-in-out' }
-  )
+    block1.animate(
+      [
+        {
+          transform: `translate(${-dx}px, ${-dy}px)`,
+        },
+        {
+          transform: 'translate(0px, 0px)',
+        },
+      ],
+      { duration: 400, fill: 'both', easing: 'ease-in-out' }
+    )
 
-  index = (index + 1) % positions.length
-})
+    index = (index + 1) % positions.length
+  })
+}
