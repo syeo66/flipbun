@@ -17,14 +17,18 @@ if (block1) {
 
     const dx = end.left - start.left
     const dy = end.top - start.top
+    const dh = start.height / end.height
+    const dw = start.width / end.width
 
     block1.animate(
       [
         {
-          transform: `translate(${-dx}px, ${-dy}px)`,
+          transformOrigin: 'top left',
+          transform: `translate(${-dx}px, ${-dy}px) scale(${dw}, ${dh})`,
         },
         {
-          transform: 'translate(0px, 0px)',
+          transformOrigin: 'top left',
+          transform: 'none',
         },
       ],
       { duration: 400, fill: 'both', easing: 'ease-in-out' }
