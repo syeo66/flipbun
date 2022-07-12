@@ -71,20 +71,25 @@ nav {
   box-shadow: 0px 5px 8px rgba(0,0,0,0.3);
   display: flex;
   margin-bottom: 1rem;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.block:nth-child(4n+1) {
+.block.selected {
+  opacity: .5;
+}
+
+.block.first {
   background-color: purple;
 }
 
-.block:nth-child(4n+2) {
+.block.second {
   background-color: rgb(40,180,4);
 }
 
-.block:nth-child(4n+3) {
+.block.third {
   background-color: rgb(180,40,4);
 }
 
-.block:nth-child(4n+4) {
+.block.fourth {
   background-color: rgb(4,40,180);
 }
