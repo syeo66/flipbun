@@ -1,3 +1,5 @@
+import animate from './animate'
+
 const experiment2 = () => {
   const elms = document.querySelectorAll('#test2 .block')
   elms.forEach((elm) => {
@@ -24,41 +26,8 @@ const experiment2 = () => {
       selected.parentElement.insertBefore(selected, elm)
       selected.parentElement.insertBefore(elm, after)
 
-      const end1 = selected.getBoundingClientRect()
-      const end2 = elm.getBoundingClientRect()
-
-      const dx1 = end1.left - start1.left
-      const dy1 = end1.top - start1.top
-      const dx2 = end2.left - start2.left
-      const dy2 = end2.top - start2.top
-
-      selected.animate(
-        [
-          {
-            transformOrigin: 'top left',
-            transform: `translate(${-dx1}px, ${-dy1}px)`,
-          },
-          {
-            transformOrigin: 'top left',
-            transform: 'none',
-          },
-        ],
-        { duration: 400, fill: 'both', easing: 'ease-in-out' }
-      )
-
-      elm.animate(
-        [
-          {
-            transformOrigin: 'top left',
-            transform: `translate(${-dx2}px, ${-dy2}px)`,
-          },
-          {
-            transformOrigin: 'top left',
-            transform: 'none',
-          },
-        ],
-        { duration: 400, fill: 'both', easing: 'ease-in-out' }
-      )
+      animate(selected, start1)
+      animate(elm, start2)
 
       selected.classList.remove('selected')
     })
