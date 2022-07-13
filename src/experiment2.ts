@@ -3,7 +3,6 @@ const experiment2 = () => {
   elms.forEach((elm) => {
     elm.addEventListener('click', () => {
       const selected = document.querySelector('#test2 .selected')
-      console.log(selected)
 
       if (selected && selected === elm) {
         // deselect element
