@@ -3,8 +3,6 @@ import animate from './animate'
 const experiment3 = () => {
   const elms = document.querySelectorAll<HTMLDivElement>('#test3 .block')
 
-  let zIndex = 1
-
   elms.forEach((elm) => {
     elm.addEventListener('click', () => {
       const starts = Array.from(elms).map((e) => e.getBoundingClientRect())
@@ -17,11 +15,11 @@ const experiment3 = () => {
         elm.classList.add('fullscreen')
       }
 
-      elm.style.zIndex = `${zIndex++}`
+      elm.style.zIndex = '10'
 
       elms.forEach((e, i) => {
         if (e !== elm) {
-          e.style.zIndex = `0`
+          e.style.zIndex = '0'
         }
 
         animate(e, starts[i])
