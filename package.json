@@ -4,7 +4,7 @@
   "description": "A FLIP animation test",
   "main": "src/index.ts",
   "author": "Red Ochsenbein <red@redochsenbein.ch>",
-  "license": "BSD0",
+  "license": "0BSD",
   "private": true,
   "dependencies": {
     "bun-types": "^0.1.2"
