@@ -1,6 +1,6 @@
 # Some FLIP animation experiments using bun
 
-> It seems this is not longer working with the latest version of bun. The concept itself is still legit. Anyways: Archiving this now.
+It seems this is not longer working with the latest version of bun. The concept itself is still legit. Anyways: Archiving this now.
 
 ## Start local development server
 
